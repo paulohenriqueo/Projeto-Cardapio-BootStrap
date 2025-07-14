@@ -10,17 +10,21 @@ var prods = [
 function calc(){
     var quantities = document.getElementsByName("quantity");
     var output     = document.getElementById("output");
+    var title      = document.getElementById("title");
     var total      = 0;
     var name       = document.getElementById("name").value;
-
+    
     output.innerHTML = "";
+    title.innerHTML = " ";
 
         var formatter = new Intl.NumberFormat('pt-BR', {
         style: 'currency',
         currency: 'BRL',
     });
+    
+    
 
-    output.innerHTML += `<h4><strong>Caro ${name}</strong></h4>`;
+    title.innerHTML += `<h4><strong>Caro ${name}</strong></h4>`;
     output.innerHTML += `<p>Seguem os dados do seu pedido.</p>`;
     output.innerHTML += `<p>O seu pedido é:</p>`;
     output.innerHTML += `<ul>`;
